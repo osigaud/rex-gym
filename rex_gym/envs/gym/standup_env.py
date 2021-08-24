@@ -43,7 +43,7 @@ class RexStandupEnv(rex_gym_env.RexGymEnv):
                  log_path=None,
                  signal_type="ol",
                  terrain_type="plane",
-                 terrain_id=None,
+                 terrain_id='plane',
                  mark='base'):
         """Initialize the rex alternating legs gym environment.
 

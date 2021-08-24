@@ -100,6 +100,7 @@ class Rex:
             the walk gait. In this mode, the Rex's base is hanged midair so
             that its walk gait is clearer to visualize.
         """
+        print("terrain_id:", terrain_id)
         self.mark = mark
         self.num_motors = mark_constants.MARK_DETAILS['motors_num'][self.mark]
         self.num_legs = 4

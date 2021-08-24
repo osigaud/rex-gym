@@ -46,7 +46,7 @@ class RexWalkEnv(rex_gym_env.RexGymEnv):
                  backwards=None,
                  signal_type="ik",
                  terrain_type="plane",
-                 terrain_id=None,
+                 terrain_id='plane',
                  mark='base'):
         """Initialize the rex alternating legs gym environment.
 

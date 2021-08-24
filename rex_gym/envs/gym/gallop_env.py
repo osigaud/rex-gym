@@ -59,7 +59,7 @@ class RexReactiveEnv(rex_gym_env.RexGymEnv):
                  target_position=None,
                  signal_type="ik",
                  terrain_type="plane",
-                 terrain_id=None,
+                 terrain_id='plane',
                  mark='base'):
         """Initialize Rex trotting gym environment.
 
