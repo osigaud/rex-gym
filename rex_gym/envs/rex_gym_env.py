@@ -97,7 +97,7 @@ class RexGymEnv(gym.Env):
                  backwards=None,
                  signal_type="ik",
                  terrain_type="plane",
-                 terrain_id=None,
+                 terrain_id="plane",
                  mark='base'):
         """ Initialize the rex gym environment.
 

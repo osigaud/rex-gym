@@ -127,7 +127,7 @@ class RexReactiveEnv(rex_gym_env.RexGymEnv):
         action_dim = action_dim_map[self._signal_type]
         action_low = np.array([action_max[self._signal_type]] * action_dim)
         action_high = -action_low
-        self.action_space = spaces.Box(action_low, action_high)
+        self.action_space = spaces.Box(action_low, action_high, dtype=np.float32)
         self._cam_dist = 1.0
         self._cam_yaw = 0.0
         self._cam_pitch = -20
