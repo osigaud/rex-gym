@@ -402,6 +402,7 @@ class RexGymEnv(gym.Env):
 
         action = self._transform_action_to_motor_command(action)
         self.rex.Step(action)
+        print("rex step")
         reward = self._reward()
         done = self._termination()
         # @TODO fix logging
