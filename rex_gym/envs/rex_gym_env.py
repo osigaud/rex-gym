@@ -402,7 +402,7 @@ class RexGymEnv(gym.Env):
 
         action = self._transform_action_to_motor_command(action)
         self.rex.Step(action)
-        print("rex step")
+        # print("rex step")
         reward = self._reward()
         done = self._termination()
         # @TODO fix logging
@@ -412,6 +412,7 @@ class RexGymEnv(gym.Env):
         self._env_step_counter += 1
         if done:
             self.rex.Terminate()
+            print("done :", self._env_step_counter)
         return np.array(self._get_observation()), reward, done, {'action': action}
 
     def render(self, mode="rgb_array", close=False):
