@@ -144,7 +144,7 @@ class Rex:
         else:
             self._kp = 1
             self._kd = 1
-        self.first_reset = 0 # to debug
+        self.nb_reset = 0 # to debug
         self.time_step = time_step
         self._step_counter = 0
         self.init_on_rack_position = INIT_RACK_POSITION
@@ -267,10 +267,10 @@ class Rex:
             reset_time <= 0 or in torque control mode, the phase of holding the
             default pose is skipped.
         """
-        if self.first_reset == 3:
-            raise "Where are we now?"
-        print("reset simulation")
-        self.first_reset += 1 # to debug
+        # if self.nb_reset == 3:
+        #    raise "Where are we now?"
+        print("reset simulation", self.nb_reset)
+        self.nb_reset += 1 # to debug
         if self._on_rack:
             init_position = INIT_RACK_POSITION
         else:
