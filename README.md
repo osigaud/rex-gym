@@ -8,7 +8,7 @@ To reach this, we made the following changes:
 
 * We removed the dependencies to tensorflow in the installation requirements and required a faster to install version of pybullet
 
-* We registered the available rex-gym environments in '''rex_gym/__init__.py''' and filled '''rex_gym/envs/__init__.py'''
+* We registered the available rex-gym environments in ```rex_gym/__init__.py``` and filled ```rex_gym/envs/__init__.py```
 
 * We have set the default value of the terrain_id parameter to 'plane' instead of None in all environments
 
