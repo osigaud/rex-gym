@@ -1,3 +1,19 @@
+This repository is a fork from https://github.com/nicrusso7/rex-gym
+
+It is intended to turn rex-gym into a set of environment that can immediately be installed as gym environments through the standard interface.
+
+To reach this, we made the following changes:
+
+* We removed documentation of the CLI usage, this is not our purpose
+
+* We removed the dependencies to tensorflow in the installation
+
+* We registered the available rex-gym environments in rex_gym/__init__.py and filled rex_gym/envs/__init__.py
+
+* We have set the default value of the terrain_id parameter to 'plane' instead of None
+
+* This is still work in progress
+
 # Rex: an open-source quadruped robot
 
 ![](images/intro.gif)
@@ -35,37 +51,6 @@ pip install rex_gym
 Clone this repository and run from the root of the project:
 ```
 pip install .
-```
-
-# CLI usage
-Run ``` rex-gym --help ``` to display the available commands and ``` rex-gym COMMAND_NAME --help ``` to show the help 
-message for a specific command.
-
-Use the `--arg` flag to eventually set the simulation arguments. For a full list check out the [environments parameters](#environments-parameters).
-
-To switch between the `Open Loop` and the `Bezier controller (inverse kinematics)` modes, just append either the `--open-loop` or `--inverse-kinematics` flags.
-```
-rex-gym COMMAND_NAME -ik
-rex-gym COMMAND_NAME -ol
-```
-For more info about the modes check out [the learning approach](#learning-approach).
-
-## Policy player: run a pre-trained agent
-To start a pre-trained agent (play a learned `Control Policy`):
-```
-rex-gym policy --env ENV_NAME
-```
-
-## Train: Run a single training simulation
-To start a single agent rendered session (`agents=1`, `render=True`):
-```
-rex-gym train --playground True --env ENV_NAME --log-dir LOG_DIR_PATH
-```
-
-## Train: Start a new batch training simulation
-To start a new batch training session:
-```
-rex-gym train --env ENV_NAME --log-dir LOG_DIR_PATH
 ```
 
 # Robot platform
