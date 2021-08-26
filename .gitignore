@@ -3,4 +3,4 @@
 *.egg-info
 *.DS_Store
 /dist
-/__pycache__/
+__pycache__/
