@@ -1,16 +1,16 @@
 This repository is a fork from https://github.com/nicrusso7/rex-gym
 
-It is intended to turn rex-gym into a set of environment that can immediately be installed as gym environments through the standard interface.
+It is intended to turn rex-gym into a set of environments that can immediately be installed as gym environments through the standard interface.
 
 To reach this, we made the following changes:
 
 * We removed documentation of the CLI usage, this is not our purpose
 
-* We removed the dependencies to tensorflow in the installation
+* We removed the dependencies to tensorflow in the installation requirements and required a faster to install version of pybullet
 
-* We registered the available rex-gym environments in rex_gym/__init__.py and filled rex_gym/envs/__init__.py
+* We registered the available rex-gym environments in 'rex_gym/__init__.py' and filled 'rex_gym/envs/__init__.py'
 
-* We have set the default value of the terrain_id parameter to 'plane' instead of None
+* We have set the default value of the terrain_id parameter to 'plane' instead of None in all environments
 
 * This is still work in progress
 
